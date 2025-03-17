@@ -1,0 +1,39 @@
+body {
+    font-family: 'Caesar Dressing', cursive;
+    line-height: 1.6;
+    margin: 20px;
+    color: rgb(128, 120, 10);
+    background-color: black;
+}
+
+h1 {
+    color: #c04444;
+    font-size: 4em;
+    text-align: center;
+
+}
+
+footer{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    color: #973333;
+}
+
+.centered-image {
+    display: block; 
+    margin: 20px auto; 
+    width: 50%; 
+    max-width: 400px; 
+    height: auto; 
+}
+h2, h3, h4, h5{
+    color: #973333;
+    font-size: 2em;
+}
+
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
