@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Impossible - Spy Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    
+    <div id="game-container">
+        <h1>Mission Impossible: The Diamond Deception</h1>
+        <p id="story-text">You and your best friend, Alex, are about to pull off the greatest heist in history—stealing the Eternal Prism, the world's most expensive diamond. Can both of you pull it off? </p>
+        <button id="start-button" onclick="startGame()">Start the Heist</button> <!-- Start button -->
+        <div id="choices"></div>
+        <button id="restart" onclick="startGame()" style="display: none;">Restart Game</button>
+    </div>
+    <img id="scene-image" src="intro.jpg" alt="Scene Image"> <!-- Adjusted image source -->
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+<button id="addendum-button" style="display: none;" onclick="showAddendum()">View Addendum</button>
+
+
+<div id="addendum-modal" style="display: none;">
+    <h2>Addendum</h2>
+    <div id="addendum-content">
+        <p>Loading...</p>
+    </div>
+    <button onclick="closeAddendum()">Close</button>
+</div>
+
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

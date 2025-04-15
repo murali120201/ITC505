@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Space Adventure Mad Lib</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🚀 Create Your Space Adventure!</h1>
+  <form action="/ITC505/lab-7/index.html" method="POST">
+    <label>Name: <input type="text" name="name" required></label><br>
+    <label>Planet Name: <input type="text" name="planetName" required></label><br>
+    <label>Adjective: <input type="text" name="adjective" required></label><br>
+    <label>Plural Noun: <input type="text" name="pluralNoun" required></label><br>
+    <label>Adjective 2: <input type="text" name="adjective2" required></label><br>
+    <label>Verb (past tense): <input type="text" name="verbPast" required></label><br>
+    <label>Silly Object: <input type="text" name="sillyObject" required></label><br>
+    <label>Emotion: <input type="text" name="emotion" required></label><br>
+    <label>Verb: <input type="text" name="verb" required></label><br>
+    <button type="submit">Launch Story</button>
+  </form>
+  <footer><p>Last updated: <span id="lastModified"></span></p></footer>
+  <script>
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>

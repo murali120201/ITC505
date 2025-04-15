@@ -1,0 +1,119 @@
+/* General Page Styling */
+body {
+    font-family: 'STIX Two Text', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Holy Grail Layout */
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav main ad"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    grid-area: header;
+    background: #0073e6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    grid-area: nav;
+    background: #343a40;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.sidebar a:hover {
+    background: #495057;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    grid-area: main;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Prime Number Checker Input */
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Advertisement Section */
+.ad {
+    grid-area: ad;
+    padding: 20px;
+    text-align: center;
+}
+
+.ad img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background: #212529;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}

@@ -1,0 +1,101 @@
+body {
+    font-family: 'Rubik Pixels', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#game-container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    display: block; /* Show the game container initially */
+}
+
+footer {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 14px;
+    color: #ccc;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive; /* Apply the new font */
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+#scene-image {
+    width: 35%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin: 20px auto; /* Center the image */
+    display: block; /* Center the image */
+}
+
+#choices button {
+    background: #ff4b2b;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+#choices button:hover {
+    background: #ff6b5a;
+}
+
+#restart {
+    margin-top: 20px;
+    background: #007bff;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    border-radius: 5px;
+}
+
+#restart:hover {
+    background: #0056b3;
+}
+
+#start-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block; /* Center the button */
+}
+
+#start-button:hover {
+    background: #218838;
+}
+
+#addendum-modal {
+    width: 60%;
+    max-width: 600px;
+    max-height: 80vh;
+    text-align: left;
+    background: white;
+    color: black;
+    padding: 20px;
+    border: 2px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+}

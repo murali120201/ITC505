@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Lab 6: My Holy Grail Layout</h1>
+        </header>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Interactive JavaScript: Prime Number Checker</h2>
+            <p>Enter a number to check if it is prime:</p>
+            <input type="number" id="primeInput" placeholder="Enter a number">
+            <button onclick="checkPrime()">Check</button>
+            <p>Result: <span id="result"></span></p>
+        </main>
+        <aside class="ad">
+            <a href="https://www.amazon.com/dp/B09G3HRP47" target="_blank">
+                <img src="prime-book.jpg" alt="Prime Numbers Book" width="100%">
+            </a>
+        </aside>
+        <footer>
+            <p><strong>Addendum:</strong> This project implements a Holy Grail Layout, a widely recognized web design pattern that ensures a well-structured, user-friendly interface. The layout consists of a header, sidebar navigation, main content area, advertisement section, and footer. The design choices and coding practices aim to create an engaging, visually appealing, and functional webpage.</p>
+            <p>Font Choice & Typography
+                The webpage utilizes STIX Two Text from Google Fonts, a serif font particularly well-suited for mathematical and scientific content. This choice aligns with the Prime Number Checker functionality, reinforcing the mathematical theme of the page.
+                
+                Serif Typeface: Provides a formal and structured appearance, making mathematical concepts feel more authoritative.
+                
+                Weight Variations (400 & 600): These provide a good contrast between regular text and headings, improving readability.</p>
+                <p>Layout & Grid System: Sidebar Navigation is positioned on the left for intuitive access.
+
+                    Main Content Area is central, maximizing focus on the prime number checker.
+                    
+                    Advertisement Section is placed on the right to allow non-intrusive monetization or additional resources.
+                    
+                    Footer spans the full width, consolidating additional information in one place.
+                    
+                    This structure ensures optimal readability, user engagement, and responsiveness across different screen sizes.</p>
+                    <p>Color Scheme & Visual Hierarchy
+                        A modern and professional color palette is used:
+                        
+                        Primary Color (#0073e6 - Blue): Used for the header, reinforcing trust and a clean aesthetic.
+                        
+                        Dark Background (#343a40 - Dark Gray): For the sidebar, creating strong contrast and improving navigation visibility.
+                        
+                        Main Content (White Background): Enhances readability and prevents visual clutter.
+                        
+                        Accent Colors:
+                        
+                        Green (#28a745) for confirmation elements (e.g., correct prime number results).
+                        
+                        Red (#dc3545) for warnings and errors (e.g., invalid inputs).
+                        
+                        These choices follow UI/UX best practices, ensuring clarity and an engaging experience.</p>
+                    <p>Last updated: <span id="lastModified"></span></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
