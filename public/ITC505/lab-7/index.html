@@ -5,21 +5,94 @@
   <title>Space Adventure Mad Lib</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <h1>🚀 Create Your Space Adventure!</h1>
   <form action="/ITC505/lab-7/index.html" method="POST">
-    <label>Name: <input type="text" name="name" required></label><br>
-    <label>Planet Name: <input type="text" name="planetName" required></label><br>
-    <label>Adjective: <input type="text" name="adjective" required></label><br>
-    <label>Plural Noun: <input type="text" name="pluralNoun" required></label><br>
-    <label>Adjective 2: <input type="text" name="adjective2" required></label><br>
-    <label>Verb (past tense): <input type="text" name="verbPast" required></label><br>
-    <label>Silly Object: <input type="text" name="sillyObject" required></label><br>
-    <label>Emotion: <input type="text" name="emotion" required></label><br>
-    <label>Verb: <input type="text" name="verb" required></label><br>
-    <button type="submit">Launch Story</button>
+    <label>Your Name: 
+      <input type="text" name="name" id="name" required>
+      <button type="button" onclick="fillRandom('name')">🎲</button>
+    </label><br>
+
+    <label>Planet Name: 
+      <input type="text" name="planetName" id="planetName" required>
+      <button type="button" onclick="fillRandom('planetName')">🎲</button>
+    </label><br>
+
+    <label>Adjective: 
+      <input type="text" name="adjective" id="adjective" required>
+      <button type="button" onclick="fillRandom('adjective')">🎲</button>
+    </label><br>
+
+    <label>Plural Noun: 
+      <input type="text" name="pluralNoun" id="pluralNoun" required>
+      <button type="button" onclick="fillRandom('pluralNoun')">🎲</button>
+    </label><br>
+
+    <label>Another Adjective: 
+      <input type="text" name="adjective2" id="adjective2" required>
+      <button type="button" onclick="fillRandom('adjective2')">🎲</button>
+    </label><br>
+
+    <label>Verb (past tense): 
+      <input type="text" name="verbPast" id="verbPast" required>
+      <button type="button" onclick="fillRandom('verbPast')">🎲</button>
+    </label><br>
+
+    <label>Silly Object: 
+      <input type="text" name="sillyObject" id="sillyObject" required>
+      <button type="button" onclick="fillRandom('sillyObject')">🎲</button>
+    </label><br>
+
+    <label>Emotion: 
+      <input type="text" name="emotion" id="emotion" required>
+      <button type="button" onclick="fillRandom('emotion')">🎲</button>
+    </label><br>
+
+    <label>Verb: 
+      <input type="text" name="verb" id="verb" required>
+      <button type="button" onclick="fillRandom('verb')">🎲</button>
+    </label><br><br>
+
+    <button type="submit">🚀 Launch Story</button>
   </form>
-  <footer><p>Last updated: <span id="lastModified"></span></p></footer>
+
+  <script>
+    const words = {
+      name: ["Zara", "Nova", "Captain Blaze", "Orion", "Alex", "Lyra", "Cosmo", "Juno", "Rocket", "Kira"],
+      planetName: ["Zogtron", "Nebulon", "Crython", "Galaxar", "Xenthos", "Velkaria", "Draxon", "Tritonia", "Zephyria"],
+      adjective: ["glowing", "mysterious", "icy", "stormy", "burning", "desolate", "twinkling", "radioactive"],
+      pluralNoun: ["aliens", "craters", "asteroids", "comets", "robots", "satellites", "moons", "galaxies"],
+      adjective2: ["slimy", "huge", "invisible", "sparkly", "grumpy", "fiery", "bouncy", "hovering"],
+      verbPast: ["danced", "attacked", "floated", "teleported", "exploded", "vanished", "leaped", "spun"],
+      sillyObject: ["banana blaster", "space spoon", "laser pillow", "gravity wrench", "toaster ray", "nebula net"],
+      emotion: ["terrified", "excited", "confused", "relieved", "thrilled", "curious", "peaceful", "bold"],
+      verb: ["run", "zoom", "escape", "teleport", "blast off", "retreat", "dock", "hide"]
+    };
+
+    function fillRandom(field) {
+      const input = document.getElementById(field);
+      const options = words[field];
+      const randomWord = options[Math.floor(Math.random() * options.length)];
+      input.value = randomWord;
+    }
+  </script>
+
+  <div class="addendum">
+    <h2>📝 Addendum</h2>
+    <p><strong>Purpose:</strong> This project is a space-themed Mad Lib game built using ExpressJS and front-end web technologies.</p>
+    <p><strong>Technology Stack:</strong> Node.js, ExpressJS, vanilla JS, HTML, and CSS.</p>
+    <p><strong>User Interface Theme:</strong> Futuristic space design with dark backgrounds and glowing text.</p>
+    <p><strong>Font Choices:</strong> Sans-serif fonts like Segoe UI / Verdana for readability and clean aesthetics.</p>
+    <p><strong>Interactive Features:</strong> Random word buttons for each field using in-memory JavaScript dictionaries.</p>
+    <p><strong>Validation:</strong> Server-side validation ensures all fields are filled before submission.</p>
+    <p><strong>Deployment:</strong> Runs locally on port 8080 and is also deployed live using Render.</p>
+    <p><strong>Learning Outcome:</strong> Gained experience with ExpressJS, form handling, deployment, and enhancing user interactivity.</p>
+  </div>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
   <script>
     document.getElementById('lastModified').textContent = document.lastModified;
   </script>
