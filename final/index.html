@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lights Out Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Lights Out
+    <div class="controls">
+        <button id="resetBtn">🔁 Reset Game</button>
+        <button id="newGameBtn">🎲 New Game</button>
+      </div>
+      
+  </h1>
+  <div id="board"></div>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+  <script src="script.js"></script>
+
+  <div id="winPopup" class="popup">
+    <div class="popup-content">
+      <h2>🎉 Hoooray! Congrats, you win!! 🎉</h2>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <section id="addendum">
+    <h2>📝 Addendum: Design & Development Reflection</h2>
+  
+    <p><strong>Project Overview:</strong><br>
+      In this project, I developed a playable version of the classic <em>Lights Out</em> puzzle game using HTML, CSS, and JavaScript. The primary goal was to create a dynamic and interactive game board that automatically initializes with a random but solvable puzzle configuration. When the user successfully solves the puzzle, the game provides clear feedback through a celebratory popup message.
+    </p>
+  
+    <p><strong>Styling and Font Choices:</strong><br>
+      For a more visually engaging appearance, I selected the <strong>“Barriecito”</strong> font from Google Fonts to give the game a playful personality. This hand-drawn, fun-style typeface has a friendly and casual vibe, which adds a sense of approachability to the game and complements its interactive nature.<br><br>
+  
+      The background uses a cool-toned linear gradient — shifting from a deep navy to a blue-gray — to provide a modern, slightly futuristic look that suits a logic-based puzzle. Hover and toggle animations on the board cells are smooth and subtle, creating responsive visual feedback when users interact with the game board.
+    </p>
+  
+    <p><strong>Core Game Logic:</strong><br>
+      Clicking a cell on the 5x5 board toggles its own state along with its adjacent neighbors (up, down, left, right). Instead of assigning random states, the board is initialized using a simulated series of valid random moves, which guarantees that the configuration is solvable.<br><br>
+  
+      The <code>hasUserInteracted</code> flag ensures that the “You win” popup does not appear unless the user actually interacts with the puzzle, preventing accidental win detection on refresh or during board setup.
+    </p>
+  
+    <p><strong>Optional Features Added:</strong></p>
+    <ul>
+      <li>🎉 <strong>Stylized Win Modal:</strong> Instead of a basic alert, a themed popup appears saying “🎉 Hoooray! 👏 Congrats, you win!! 🎉” when the puzzle is solved.</li>
+      <li>🔁 <strong>Reset Game Button:</strong> Restores the board to its original randomized state.</li>
+      <li>🎲 <strong>New Game Button:</strong> Generates a completely new, random (but solvable) puzzle.</li>
+      <li>✨ <strong>Subtle Animations:</strong> Cells fade and animate smoothly when toggled or hovered, improving user experience and visual flow.</li>
+    </ul>
+  
+    <p><strong>Challenges and Insights:</strong><br>
+      The first challenge was ensuring random boards were solvable. This was overcome by simulating valid random “clicks” from a clean board, since each click represents a legal move — thus keeping the resulting puzzle always solvable.<br><br>
+  
+      Another edge case was the premature triggering of the win condition right after a refresh. This was resolved by tracking whether the user had interacted before checking for a win.
+    </p>
+  
+    <p><strong>Takeaway:</strong><br>
+      This project emphasized the value of clean, modular JavaScript, good UI/UX design, and user-friendly accessibility features like hover effects and victory animations. It also improved my ability to debug interaction-driven logic and maintain consistent game state across resets.
+    </p>
+  </section>
+  
+  
+</body>
+</html>
